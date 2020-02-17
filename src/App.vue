@@ -1,32 +1,45 @@
 <template>
+  
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <PreData></PreData>
+    <PageHeader></PageHeader>
+    <div class="box">
+      <Map></Map>
+      <FuncBar></FuncBar>
     </div>
-    <router-view/>
   </div>
 </template>
 
+<script>
+  import PageHeader from './components/PageHeader'
+  import EventLine from './components/EventLine'
+  import Map from './components/Map'
+  import PreData from './components/PreData'
+  import FuncBar from './components/FuncBar'
+export default {
+  name: 'App',
+  components: {
+    PageHeader,
+    EventLine,
+    Map,
+    PreData,
+    FuncBar
+  }
+}
+</script>
+
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  height: 1080px;
+  width: 1920px;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+body{
+      background:white;
+      margin: 0px;
+  }
+.box{
+  width:100%;
+  height:85%;
 }
 </style>
